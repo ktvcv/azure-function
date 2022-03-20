@@ -1,0 +1,47 @@
+### Local
+POST http://localhost:7083/api/FilterData
+Content-Type: application/json
+
+{
+  "data": [
+    {
+      "name": "Viktoriia",
+      "city": "Odesa"
+    },
+    {
+      "name": "Alice",
+      "city": "Dnipro"
+    }
+  ],
+  "condition": {
+    "include": [
+      {
+        "city": "Odesa"
+      }
+    ]
+  }
+}
+
+###Deployed to Azure
+POST https://app-azure-function-220320180039.azurewebsites.net/api/FilterData
+Content-Type: application/json
+
+{
+  "data": [
+    {
+      "name": "Viktoriia",
+      "city": "Odesa"
+    },
+    {
+      "name": "Alice",
+      "city": "Dnipro"
+    }
+  ],
+  "condition": {
+    "include": [
+      {
+        "city": "Odesa"
+      }
+    ]
+  }
+}
